@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1c6fba4-2cde-4abd-973e-f434fa8ad8d7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../introToIntellectDataAnalisys/lecture03/europarl_st.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../introToIntellectDataAnalisys/lecture03/europarl_st.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../introToIntellectDataAnalisys/lecture03/lecture_03.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../introToIntellectDataAnalisys/lecture03/lecture_03.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -62,9 +61,10 @@
     <session id="-635691556">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
     </session>
@@ -153,8 +153,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/taskH.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="63" column="19" lean-forward="true" selection-start-line="63" selection-start-column="19" selection-end-line="63" selection-end-column="19" />
+            <state relative-caret-position="243">
+              <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="63" selection-end-column="19" />
               <folding>
                 <marker date="1539277933344" expanded="true" signature="122:182" ph="..." />
                 <marker date="1539277933344" expanded="true" signature="954:1096" ph="..." />
@@ -401,7 +401,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2739872" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2771855" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -512,8 +512,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/taskH.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="63" column="19" lean-forward="true" selection-start-line="63" selection-start-column="19" selection-end-line="63" selection-end-column="19" />
+        <state relative-caret-position="243">
+          <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="63" selection-end-column="19" />
           <folding>
             <marker date="1539277933344" expanded="true" signature="122:182" ph="..." />
             <marker date="1539277933344" expanded="true" signature="954:1096" ph="..." />

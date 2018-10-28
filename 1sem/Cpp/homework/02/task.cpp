@@ -69,36 +69,41 @@ private:
                     return res;
 
                 default:
-                    throw invalid_argument("Expected (+|-|/|*).");
+                    throw invalid_argument("Expected (+|-).");
             }
         } while (true);
     }
 
     int calc_addend(string::const_iterator &position, string::const_iterator end) {
-        string::const_iterator old_pos = position;
         int res = calc_value(position, end);
+        lexeme cur_lexeme;
         int quotient;
 
-        lexeme cur_lexeme = get_lexeme(position, end);
-        switch (cur_lexeme.type) {
-            case Token::multiply:
-                return res * calc_addend(++position, end); // todo
+        do {
+            cur_lexeme = get_lexeme(position, end);
+            switch (cur_lexeme.type) {
+                case Token::multiply:
+                    res *= calc_value(++position, end);
+                    continue;
 
-            case Token::divide:
-                quotient = calc_addend(++position, end);
-                if (quotient == 0)
-                    throw invalid_argument("Cant divide by zero");
-                return res / quotient; // todo
+                case Token::divide:
+                    quotient = calc_value(++position, end);
+                    if (quotient == 0)
+                        throw invalid_argument("Cant divide by zero");
+                    res /= quotient;
+                    continue;
 
-            case Token::add:
-            case Token::sub:
-            case Token::expression_end:
-                return res;
+                case Token::add:
+                case Token::sub:
+                case Token::expression_end:
+                    return res;
 
-            default:
-                throw invalid_argument("Expected (+|-|/|*).");
-        }
+                default:
+                    throw invalid_argument("Expected (+|-|/|*).");
+            }
+        } while (true);
     }
+
 
     int calc_value(string::const_iterator &position, string::const_iterator end) {
         lexeme cur_lexeme = get_lexeme(position, end);

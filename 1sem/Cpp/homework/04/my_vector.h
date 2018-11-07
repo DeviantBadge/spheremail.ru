@@ -109,16 +109,23 @@ MyVector<T> &MyVector<T>::operator=(const MyVector<T> &other) {
     mem_capacity = other.size() * 2 > BASE_CAPACITY ? other.size() : BASE_CAPACITY;
     length = other.size();
     values = (T *) malloc(capacity() * sizeof(T));
-    std::copy(other.values, other.values + size(), values);
+    if (other.size() > 0)
+        std::copy(other.values, other.values + size(), values);
 }
 
 template<typename T>
 MyVector<T> &MyVector<T>::operator=(MyVector<T> &&other) {
     delete[] values;
-    mem_capacity = other.capacity();
-    length = other.size();
-    values = other.values;
-    other.values = nullptr;
+    if (other.mem_capacity > 0) {
+        mem_capacity = other.capacity();
+        length = other.size();
+        values = other.values;
+        other.values = nullptr;
+    } else {
+        mem_capacity = BASE_CAPACITY;
+        length = 0;
+        values = (T *) malloc(mem_capacity * sizeof(T));
+    }
 }
 
 template<typename T>
@@ -158,7 +165,10 @@ void MyVector<T>::add(T &&value) {
 
 template<typename T>
 T &MyVector<T>::pop() {
-    length--;
+    if (size() > 0)
+        length--;
+    else
+        throw std::out_of_range("");
     if (size() < capacity() / 3 && size() >= BASE_CAPACITY / 2) {
         change_capacity(size() * 2);
     }

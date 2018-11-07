@@ -9,7 +9,12 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ae037b0-67a1-4a2c-be97-78f7ef022426" name="Default Changelist" comment="" />
+    <list default="true" id="2ae037b0-67a1-4a2c-be97-78f7ef022426" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bigint.h" beforeDir="false" afterPath="$PROJECT_DIR$/bigint.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_vector.h" beforeDir="false" afterPath="$PROJECT_DIR$/my_vector.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../introToIntellectDataAnalisys/homework/03/hw3.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../introToIntellectDataAnalisys/homework/03/hw3.ipynb" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +27,8 @@
         <counts>
           <entry key="project.closed" value="1" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -40,13 +46,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="554" />
-          <entry key="h" value="7239" />
+          <entry key="cpp" value="592" />
+          <entry key="h" value="7341" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="ObjectiveC" value="7793" />
+          <entry key="ObjectiveC" value="7933" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -54,56 +60,30 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1258">
-              <caret line="74" selection-start-line="74" selection-end-line="74" />
+            <state relative-caret-position="269">
+              <caret line="42" column="1" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bigint.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="167">
+              <caret line="379" column="10" selection-start-line="379" selection-start-column="10" selection-end-line="379" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bigint.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="82">
-              <caret line="242" selection-start-line="242" selection-end-line="242" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/my_vector.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3162">
-              <caret line="210" column="21" selection-start-line="210" selection-start-column="21" selection-end-line="210" selection-end-column="21" />
-              <folding>
-                <element signature="e#103#115#0" expanded="true" />
-                <element signature="e#685#697#0" expanded="true" />
-                <element signature="e#452#464#0" expanded="true" />
-                <element signature="e#609#621#0" expanded="true" />
-                <element signature="e#1102#1114#0" expanded="true" />
-                <element signature="e#1331#1343#0" expanded="true" />
-                <element signature="e#2222#2234#0" expanded="true" />
-                <element signature="e#2506#2518#0" expanded="true" />
-                <element signature="e#1344#1356#0" expanded="true" />
-                <element signature="e#881#893#0" expanded="true" />
-                <element signature="e#1809#1821#0" expanded="true" />
-                <element signature="e#2001#2013#0" expanded="true" />
-                <element signature="e#2442#2454#0" expanded="true" />
-                <element signature="e#2063#2075#0" expanded="true" />
-                <element signature="e#2442#2454#0" expanded="true" />
-                <element signature="e#2115#2127#0" expanded="true" />
-                <element signature="e#860#872#0" expanded="true" />
-                <element signature="e#1168#1180#0" expanded="true" />
-                <element signature="e#3864#3876#0" expanded="true" />
-                <element signature="e#4002#4014#0" expanded="true" />
-                <element signature="e#3896#3908#0" expanded="true" />
-                <element signature="e#4050#4062#0" expanded="true" />
-                <element signature="e#1437#1449#0" expanded="true" />
-                <element signature="e#1707#1719#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="306">
+              <caret line="126" column="56" selection-start-line="126" selection-start-column="56" selection-end-line="126" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -111,7 +91,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../03/matrix.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="566">
+            <state relative-caret-position="816">
               <caret line="48" column="1" selection-start-line="48" selection-start-column="1" selection-end-line="62" />
             </state>
           </provider>
@@ -121,7 +101,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>next_addend</find>
       <find>reverse</find>
       <find>reversed</find>
       <find>int</find>
@@ -151,6 +130,7 @@
       <find>&gt;&gt;</find>
       <find>cout</find>
       <find>//</find>
+      <find>operator=</find>
     </findStrings>
     <replaceStrings>
       <replace>length</replace>
@@ -172,10 +152,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/test.cpp" />
-        <option value="$PROJECT_DIR$/my_vector.h" />
         <option value="$PROJECT_DIR$/test1.cpp" />
         <option value="$PROJECT_DIR$/bigint.h" />
+        <option value="$PROJECT_DIR$/test.cpp" />
+        <option value="$PROJECT_DIR$/my_vector.h" />
       </list>
     </option>
   </component>
@@ -247,23 +227,19 @@
       <option name="presentableId" value="Default" />
       <updated>1541253211760</updated>
       <workItem from="1541253214067" duration="35467000" />
+      <workItem from="1541617058377" duration="3391000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35467000" />
+    <option name="totallyTimeSpent" value="38858000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.32936078" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -271,10 +247,14 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,67 +264,33 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/bigint.h.gch" />
+    <entry file="file://$PROJECT_DIR$/test1.cpp" />
     <entry file="file://$PROJECT_DIR$/../03/matrix.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="566">
+        <state relative-caret-position="816">
           <caret line="48" column="1" selection-start-line="48" selection-start-column="1" selection-end-line="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bigint.h.gch">
-      <provider selected="true" editor-type-id="LargeFileEditor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test1.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1258">
-          <caret line="74" selection-start-line="74" selection-end-line="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my_vector.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3162">
-          <caret line="210" column="21" selection-start-line="210" selection-start-column="21" selection-end-line="210" selection-end-column="21" />
-          <folding>
-            <element signature="e#103#115#0" expanded="true" />
-            <element signature="e#685#697#0" expanded="true" />
-            <element signature="e#452#464#0" expanded="true" />
-            <element signature="e#609#621#0" expanded="true" />
-            <element signature="e#1102#1114#0" expanded="true" />
-            <element signature="e#1331#1343#0" expanded="true" />
-            <element signature="e#2222#2234#0" expanded="true" />
-            <element signature="e#2506#2518#0" expanded="true" />
-            <element signature="e#1344#1356#0" expanded="true" />
-            <element signature="e#881#893#0" expanded="true" />
-            <element signature="e#1809#1821#0" expanded="true" />
-            <element signature="e#2001#2013#0" expanded="true" />
-            <element signature="e#2442#2454#0" expanded="true" />
-            <element signature="e#2063#2075#0" expanded="true" />
-            <element signature="e#2442#2454#0" expanded="true" />
-            <element signature="e#2115#2127#0" expanded="true" />
-            <element signature="e#860#872#0" expanded="true" />
-            <element signature="e#1168#1180#0" expanded="true" />
-            <element signature="e#3864#3876#0" expanded="true" />
-            <element signature="e#4002#4014#0" expanded="true" />
-            <element signature="e#3896#3908#0" expanded="true" />
-            <element signature="e#4050#4062#0" expanded="true" />
-            <element signature="e#1437#1449#0" expanded="true" />
-            <element signature="e#1707#1719#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bigint.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="242" selection-start-line="242" selection-end-line="242" />
+        <state relative-caret-position="167">
+          <caret line="379" column="10" selection-start-line="379" selection-start-column="10" selection-end-line="379" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="42" column="1" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my_vector.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="126" column="56" selection-start-line="126" selection-start-column="56" selection-end-line="126" selection-end-column="56" />
         </state>
       </provider>
     </entry>

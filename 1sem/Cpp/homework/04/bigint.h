@@ -10,12 +10,12 @@ class BigInt {
 private:
     // cant be more then 31
     // one for all BigInt`s
-    static const unsigned BIT_BASE = 31;
-    static const unsigned CARRY_FLAG = 1 << BIT_BASE;
+    static constexpr unsigned BIT_BASE = 31;
+    static constexpr unsigned CARRY_FLAG = 1 << BIT_BASE;
 
 public:
 
-    inline static unsigned bit_mask(unsigned bits = BIT_BASE);
+    inline constexpr static unsigned bit_mask(unsigned bits = BIT_BASE);
 
     inline static unsigned reversed(unsigned val);
 
@@ -377,7 +377,7 @@ bool BigInt::operator!=(const BigInt &other) const {
     return !operator==(other);
 }
 
-unsigned BigInt::bit_mask(unsigned bits) {
+constexpr unsigned BigInt::bit_mask(unsigned bits) {
     return (((unsigned) 1) << bits) - 1;
 }
 

@@ -6,8 +6,11 @@
 #include <sstream>
 #include <regex>
 
+const std::regex CHECK_PATTERN("[^{}]*(\\{\\d+\\}[^{}]*)*");
+const std::regex PARTS_PATTERN("([^{}]+)|(\\{\\d+\\})");
+
 bool check(const std::string &value) {
-    return std::regex_match(value, std::regex("[^{}]*(\\{\\d+\\}[^{}]*)*"));
+    return std::regex_match(value, CHECK_PATTERN);
 }
 
 template<class T>
@@ -20,8 +23,7 @@ std::string to_string(T &t) {
 std::string parse(const std::string &s, std::vector <std::string> &replacements) {
     std::string res = "";
     std::string cur_part;
-    std::regex parts("([^{}]+)|(\\{\\d+\\})");
-    auto parts_begin = std::sregex_iterator(s.begin(), s.end(), parts);
+    auto parts_begin = std::sregex_iterator(s.begin(), s.end(), PARTS_PATTERN);
     auto parts_end = std::sregex_iterator();
     long number;
     for (auto i = parts_begin; i != parts_end; ++i) {
@@ -41,16 +43,10 @@ std::string parse(const std::string &s, std::vector <std::string> &replacements)
     return res;
 }
 
-template<class T, class... Args>
-std::string parse(const std::string &s, std::vector <std::string> &replacements, T &&t, Args &&... args) {
-    replacements.push_back(to_string(t));
-    return parse(s, replacements, std::forward<Args>(args)...);
-}
-
 template<class... Args>
 std::string format(const std::string &s, Args &&... args) {
     if (!check(s))
         throw std::runtime_error("error");
-    std::vector <std::string> replacements;
-    return parse(s, replacements, std::forward<Args>(args)...);
+    std::vector <std::string> replacements{ to_string(args)... };
+    return parse(s, replacements);
 }

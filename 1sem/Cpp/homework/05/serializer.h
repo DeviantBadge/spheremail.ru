@@ -30,12 +30,15 @@ public:
     Error operator()(Args &&... args);
 
 private:
-    Error process(bool val);
+    Error save(bool val);
 
-    Error process(uint64_t val);
+    Error save(uint64_t val);
 
     template<class T, class... Args>
-    Error process(T &&val, Args &&... args);
+    Error process(T &val, Args &&... args);
+
+    template<class T>
+    Error process(T &val);
 };
 
 template<class T>
@@ -48,23 +51,28 @@ Error Serializer::operator()(Args &&... args) {
     return process(std::forward<Args>(args)...);
 }
 
-Error Serializer::process(bool val) {
+Error Serializer::save(bool val) {
     output << (val ? "true" : "false");
     return Error::NoError;
 }
 
-Error Serializer::process(uint64_t val) {
+Error Serializer::save(uint64_t val) {
     output << val;
     return Error::NoError;
 }
 
 template<class T, class... Args>
-Error Serializer::process(T &&val, Args &&... args) {
-    Error err_code = process(val);
+Error Serializer::process(T &val, Args &&... args) {
+    Error err_code = save(val);
     if (err_code != Error::NoError)
         return err_code;
     output << Separator;
     return process(std::forward<Args>(args)...);
+}
+
+template<class T>
+Error Serializer::process(T &val) {
+    return save(val);
 }
 
 //**********************************************************************************************
@@ -86,12 +94,15 @@ public:
     Error operator()(Args &&... args);
 
 private:
-    Error process(bool &val);
+    Error load(bool &val);
 
-    Error process(uint64_t &val);
+    Error load(uint64_t &val);
 
     template<class T, class... Args>
-    Error process(T &&val, Args &&... args);
+    Error process(T &val, Args &&... args);
+
+    template<class T>
+    Error process(T &val);
 };
 
 template<class T>
@@ -104,7 +115,7 @@ Error Deserializer::operator()(Args &&... args) {
     return process(std::forward<Args>(args)...);
 }
 
-Error Deserializer::process(bool &val) {
+Error Deserializer::load(bool &val) {
     std::string s_val;
     input >> s_val;
     if (s_val == "true") {
@@ -117,7 +128,7 @@ Error Deserializer::process(bool &val) {
     return Error::NoError;
 }
 
-Error Deserializer::process(uint64_t &val) {
+Error Deserializer::load(uint64_t &val) {
     std::string s_val;
     input >> s_val;
     if (s_val.length() == 0 || s_val[0] == '-')
@@ -134,9 +145,14 @@ Error Deserializer::process(uint64_t &val) {
 }
 
 template<class T, class... Args>
-Error Deserializer::process(T &&val, Args &&... args) {
-    Error err_code = process(val);
+Error Deserializer::process(T &val, Args &&... args) {
+    Error err_code = load(val);
     if (err_code != Error::NoError)
         return err_code;
     return process(std::forward<Args>(args)...);
+}
+
+template<class T>
+Error Deserializer::process(T &val) {
+    return load(val);
 }

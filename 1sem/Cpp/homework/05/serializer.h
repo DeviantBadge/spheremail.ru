@@ -35,10 +35,10 @@ private:
     Error save(uint64_t val);
 
     template<class T, class... Args>
-    Error process(T &val, Args &&... args);
+    Error process(T &&val, Args &&... args);
 
     template<class T>
-    Error process(T &val);
+    Error process(T &&val);
 };
 
 template<class T>
@@ -62,7 +62,7 @@ Error Serializer::save(uint64_t val) {
 }
 
 template<class T, class... Args>
-Error Serializer::process(T &val, Args &&... args) {
+Error Serializer::process(T &&val, Args &&... args) {
     Error err_code = save(val);
     if (err_code != Error::NoError)
         return err_code;
@@ -71,7 +71,7 @@ Error Serializer::process(T &val, Args &&... args) {
 }
 
 template<class T>
-Error Serializer::process(T &val) {
+Error Serializer::process(T &&val) {
     return save(val);
 }
 
@@ -99,10 +99,10 @@ private:
     Error load(uint64_t &val);
 
     template<class T, class... Args>
-    Error process(T &val, Args &&... args);
+    Error process(T &&val, Args &&... args);
 
     template<class T>
-    Error process(T &val);
+    Error process(T &&val);
 };
 
 template<class T>
@@ -145,7 +145,7 @@ Error Deserializer::load(uint64_t &val) {
 }
 
 template<class T, class... Args>
-Error Deserializer::process(T &val, Args &&... args) {
+Error Deserializer::process(T &&val, Args &&... args) {
     Error err_code = load(val);
     if (err_code != Error::NoError)
         return err_code;
@@ -153,6 +153,6 @@ Error Deserializer::process(T &val, Args &&... args) {
 }
 
 template<class T>
-Error Deserializer::process(T &val) {
+Error Deserializer::process(T &&val) {
     return load(val);
 }

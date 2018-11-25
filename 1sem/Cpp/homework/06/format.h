@@ -47,6 +47,6 @@ template<class... Args>
 std::string format(const std::string &s, Args &&... args) {
     if (!check(s))
         throw std::runtime_error("error");
-    std::vector <std::string> replacements{ to_string(args)... };
+    std::vector <std::string> replacements{ to_string(std::forward<Args>(args))... };
     return parse(s, replacements);
 }

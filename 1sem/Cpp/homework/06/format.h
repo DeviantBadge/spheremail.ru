@@ -6,21 +6,21 @@
 #include <sstream>
 #include <regex>
 
-const std::regex CHECK_PATTERN("[^{}]*(\\{\\d+\\}[^{}]*)*");
-const std::regex PARTS_PATTERN("([^{}]+)|(\\{\\d+\\})");
 
 bool check(const std::string &value) {
+    static const std::regex CHECK_PATTERN("[^{}]*(\\{\\d+\\}[^{}]*)*");
     return std::regex_match(value, CHECK_PATTERN);
 }
 
 template<class T>
-std::string to_string(T &t) {
+std::string to_string(T &&t) {
     std::ostringstream out;
     out << t;
     return out.str();
 }
 
 std::string parse(const std::string &s, std::vector <std::string> &replacements) {
+    static const std::regex PARTS_PATTERN("([^{}]+)|(\\{\\d+\\})");
     std::string res = "";
     std::string cur_part;
     auto parts_begin = std::sregex_iterator(s.begin(), s.end(), PARTS_PATTERN);

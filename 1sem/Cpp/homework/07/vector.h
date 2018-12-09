@@ -87,7 +87,6 @@ public:
         for (auto i = 0; i < size_; ++i) {
             allocator.destroy(arr + i);
         }
-        arr = nullptr;
         size_ = 0;
         capacity_ = 0;
     }
